@@ -83,6 +83,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1jA-MO-TzQ" secondAttribute="bottom" id="ea4-n9-zfY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currencyLabel" destination="bpP-Zd-Q6e" id="Dc3-bK-LhT"/>
+                        <outlet property="pickerView" destination="1jA-MO-TzQ" id="cYO-Hk-8pO"/>
+                        <outlet property="priceLabel" destination="crW-z9-NTr" id="XTH-RX-eUs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

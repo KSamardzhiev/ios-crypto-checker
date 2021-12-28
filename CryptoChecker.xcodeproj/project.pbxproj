@@ -17,6 +17,8 @@
 		F82723E5277A66E600C3A1BA /* CryptoCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82723E4277A66E600C3A1BA /* CryptoCheckerTests.swift */; };
 		F82723EF277A66E600C3A1BA /* CryptoCheckerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82723EE277A66E600C3A1BA /* CryptoCheckerUITests.swift */; };
 		F82723F1277A66E600C3A1BA /* CryptoCheckerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82723F0277A66E600C3A1BA /* CryptoCheckerUITestsLaunchTests.swift */; };
+		F8272401277B6B3600C3A1BA /* CoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8272400277B6B3600C3A1BA /* CoinManager.swift */; };
+		F8272404277B73F600C3A1BA /* ExchangeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8272403277B73F600C3A1BA /* ExchangeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		F82723EA277A66E600C3A1BA /* CryptoCheckerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoCheckerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F82723EE277A66E600C3A1BA /* CryptoCheckerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCheckerUITests.swift; sourceTree = "<group>"; };
 		F82723F0277A66E600C3A1BA /* CryptoCheckerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCheckerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F8272400277B6B3600C3A1BA /* CoinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinManager.swift; sourceTree = "<group>"; };
+		F8272402277B6CE900C3A1BA /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		F8272403277B73F600C3A1BA /* ExchangeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +108,14 @@
 			children = (
 				F82723CA277A66E200C3A1BA /* AppDelegate.swift */,
 				F82723CC277A66E200C3A1BA /* SceneDelegate.swift */,
-				F82723CE277A66E200C3A1BA /* ViewController.swift */,
-				F82723D0277A66E200C3A1BA /* Main.storyboard */,
+				F82723FF277B6B1F00C3A1BA /* Model */,
+				F82723FE277B6B1100C3A1BA /* View */,
+				F82723FD277B6B0500C3A1BA /* Controller */,
 				F82723D6277A66E600C3A1BA /* Assets.xcassets */,
 				F82723D8277A66E600C3A1BA /* LaunchScreen.storyboard */,
 				F82723DB277A66E600C3A1BA /* Info.plist */,
 				F82723D3277A66E200C3A1BA /* CryptoChecker.xcdatamodeld */,
+				F8272402277B6CE900C3A1BA /* Config.xcconfig */,
 			);
 			path = CryptoChecker;
 			sourceTree = "<group>";
@@ -128,6 +135,31 @@
 				F82723F0277A66E600C3A1BA /* CryptoCheckerUITestsLaunchTests.swift */,
 			);
 			path = CryptoCheckerUITests;
+			sourceTree = "<group>";
+		};
+		F82723FD277B6B0500C3A1BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F82723CE277A66E200C3A1BA /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F82723FE277B6B1100C3A1BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F82723D0277A66E200C3A1BA /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F82723FF277B6B1F00C3A1BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F8272400277B6B3600C3A1BA /* CoinManager.swift */,
+				F8272403277B73F600C3A1BA /* ExchangeModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +293,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8272404277B73F600C3A1BA /* ExchangeModel.swift in Sources */,
 				F82723D5277A66E200C3A1BA /* CryptoChecker.xcdatamodeld in Sources */,
 				F82723CF277A66E200C3A1BA /* ViewController.swift in Sources */,
 				F82723CB277A66E200C3A1BA /* AppDelegate.swift in Sources */,
 				F82723CD277A66E200C3A1BA /* SceneDelegate.swift in Sources */,
+				F8272401277B6B3600C3A1BA /* CoinManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +356,7 @@
 /* Begin XCBuildConfiguration section */
 		F82723F2277A66E700C3A1BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8272402277B6CE900C3A1BA /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -383,6 +418,7 @@
 		};
 		F82723F3277A66E700C3A1BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8272402277B6CE900C3A1BA /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
