@@ -3,10 +3,8 @@
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,59 +16,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vhd-Yh-HzL">
-                                <rect key="frame" x="0.0" y="44" width="428" height="205"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vhd-Yh-HzL">
+                                <rect key="frame" x="10" y="54.000000000000014" width="408" height="208.33333333333337"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CryptoCheck" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4NG-du-ooH">
-                                        <rect key="frame" x="78" y="0.0" width="272" height="133"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CryptoCheck" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4NG-du-ooH">
+                                        <rect key="frame" x="68" y="0.0" width="272" height="118.33333333333333"/>
                                         <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="35"/>
                                         <color key="textColor" name="text-color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="sQQ-g8-2dy">
-                                        <rect key="frame" x="136.66666666666666" y="141" width="154.99999999999997" height="64"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B0q-QP-7fj" userLabel="Bitcoin View">
+                                        <rect key="frame" x="0.0" y="128.33333333333334" width="408" height="80"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Pfy-yR-JTc">
+                                                <rect key="frame" x="10" y="10" width="388" height="60"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="bitcoinsign.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TSP-O9-LaW">
+                                                        <rect key="frame" x="0.0" y="3.9999999999999858" width="263" height="52.666666666666657"/>
+                                                        <color key="tintColor" name="background-color"/>
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="35" scale="large"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="..." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crW-z9-NTr">
+                                                        <rect key="frame" x="283" y="1" width="22.333333333333314" height="58.333333333333336"/>
+                                                        <fontDescription key="fontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="35"/>
+                                                        <color key="textColor" name="background-color"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpP-Zd-Q6e">
+                                                        <rect key="frame" x="325.33333333333331" y="1" width="62.666666666666686" height="58.333333333333336"/>
+                                                        <fontDescription key="fontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="35"/>
+                                                        <color key="textColor" name="background-color"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" name="text-color"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="text-color"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="quc-Qx-7WY"/>
+                                            <constraint firstItem="Pfy-yR-JTc" firstAttribute="leading" secondItem="B0q-QP-7fj" secondAttribute="leading" constant="10" id="5bO-pc-n4J"/>
+                                            <constraint firstAttribute="trailing" secondItem="Pfy-yR-JTc" secondAttribute="trailing" constant="10" id="Ecy-sJ-zO3"/>
+                                            <constraint firstAttribute="bottom" secondItem="Pfy-yR-JTc" secondAttribute="bottom" constant="10" id="HNd-3F-0Mf"/>
+                                            <constraint firstAttribute="height" constant="80" id="QXH-Aj-Hvm"/>
+                                            <constraint firstItem="Pfy-yR-JTc" firstAttribute="top" secondItem="B0q-QP-7fj" secondAttribute="top" constant="10" id="aVy-PV-hxr"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" imagePlacement="leading" title="... USD" imagePadding="0.0" cornerStyle="capsule" titleAlignment="leading">
-                                            <imageReference key="image" image="bitcoinsign.circle.fill" catalog="system" symbolScale="large"/>
-                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="35" scale="large"/>
-                                            <fontDescription key="titleFontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="30"/>
-                                            <color key="baseForegroundColor" name="background-color"/>
-                                            <color key="baseBackgroundColor" name="text-color"/>
-                                        </buttonConfiguration>
-                                    </button>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                             </stackView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1jA-MO-TzQ">
-                                <rect key="frame" x="54" y="676" width="334" height="216"/>
+                                <rect key="frame" x="54" y="676" width="320" height="216"/>
                                 <color key="tintColor" name="text-color"/>
                             </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="background-color"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vhd-Yh-HzL" secondAttribute="trailing" id="Lcg-fO-ZeB"/>
-                            <constraint firstItem="vhd-Yh-HzL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XdF-gK-fy2"/>
+                            <constraint firstItem="vhd-Yh-HzL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="8a4-IV-K9q"/>
+                            <constraint firstItem="vhd-Yh-HzL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="LD6-qC-OUk"/>
+                            <constraint firstItem="vhd-Yh-HzL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-10" id="Q63-6l-j4X"/>
                             <constraint firstItem="1jA-MO-TzQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bMf-yG-iT2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1jA-MO-TzQ" secondAttribute="bottom" id="ea4-n9-zfY"/>
-                            <constraint firstItem="vhd-Yh-HzL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mgd-KJ-Llf"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="86.383928571428569"/>
+            <point key="canvasLocation" x="18.22429906542056" y="86.177105831533481"/>
         </scene>
     </scenes>
     <resources>
         <image name="bitcoinsign.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="background-color">
-            <color red="0.85882352939999995" green="0.90196078430000004" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.85900002717971802" green="0.90200001001358032" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="text-color">
-            <color red="0.16078431369999999" green="0.23137254900000001" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.16099999845027924" green="0.23100000619888306" blue="0.37299999594688416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
